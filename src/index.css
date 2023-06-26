@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  /*color-scheme: light dark;*/
   color: #f8f8f8;
-  background-color: #5b7b7a;
+  background-color: #84dcc6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,7 +16,6 @@
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -25,14 +24,41 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 32px;
 }
 
+nav {
+  font-size: 1.5em;
+}
+
+li {
+  list-style: none;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+ul {
+  position: relative;
+  margin: 32px;
+  display: inline-flex;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+a:hover {
+  text-shadow: #1e2933;
+}
+
+
+/*
 @media (prefers-color-scheme: light) {
   :root {
     color: #1e2933;
-    background-color: #e0f2e9;
-  }
-  a:hover {
-    color: #747bff;
+    background-color: #000000;
   }
 }
+*/

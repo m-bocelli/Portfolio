@@ -1,6 +1,62 @@
 #root {
-  max-width: 1280px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 0;
   text-align: center;
+}
+
+.header {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.name {
+  padding-top: 5.5rem;
+}
+
+.name img {
+  position: relative;
+  max-width: 1280px;
+  animation: 1s 1 normal pop;
+  transform-origin: center;
+}
+
+.link {
+  position: relative;
+  color: #f8f8f8;
+  transition: font-size 500ms;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #f8f8f8;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
+
+.link:hover {
+  color: #f8f8f8;
+  font-size: larger;
+}
+
+.line {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #f8f8f8;;
+}
+
+@keyframes pop {
+  from {width: 50%;}
+  to {width: 100%;}
 }
