@@ -1,4 +1,4 @@
-import name from '../assets/name.png'
+import name from '../assets/icon.png'
 import { NavLink } from 'react-router-dom';
 
 

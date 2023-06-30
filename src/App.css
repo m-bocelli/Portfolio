@@ -10,13 +10,25 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.head {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.head img {
+  padding: 5px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  width: 50%;
+}
+
 .name {
   padding-top: 5.5rem;
 }
 
 .name img {
   position: relative;
-  max-width: 1280px;
+  width: 100%;
   animation: 1s 1 normal pop;
   transform-origin: center;
 }
@@ -55,6 +67,7 @@
   height: 3px;
   background-color: #f8f8f8;;
 }
+
 
 @keyframes pop {
   from {width: 50%;}
