@@ -1,5 +1,3 @@
-function Projects() {
+export default function ProjectsPage() {
     return (<></>);
 }
-
-export default Projects;

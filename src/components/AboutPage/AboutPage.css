@@ -1,0 +1,140 @@
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 32px;
+}
+
+nav {
+  display: inline-block;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.nav-link {
+  list-style: none;
+  margin: 0.75em;
+  padding: 0.25em; 
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  background-color: #282828;
+  border-radius: 5px;
+}
+
+.language {
+  list-style: none;
+  margin: 10px;
+}
+
+.language span {
+  line-height: 5px;
+}
+
+.language svg {
+  background-color: #282828;
+  border-radius: 15px;
+  font-size: 3em;
+  padding: 10px;
+}
+
+.nav-list, .language-list {
+  position: relative;
+  margin: 32px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+iframe {
+  border-radius: 15px;
+  border: 5px solid #f8f8f8;
+  width: 90%;
+}
+
+a:hover {
+  text-shadow: #1e2933;
+}
+
+.header, .about-body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.head {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.head img {
+  padding: 5px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.name {
+  padding-top: 5.5rem;
+}
+
+.name img {
+  position: relative;
+  width: 100%;
+  animation: 1s 1 normal pop;
+  transform-origin: center;
+}
+
+.link {
+  position: relative;
+  color: #f8f8f8;
+  transition: font-size 500ms;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #f8f8f8;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
+
+.link:hover {
+  color: #f8f8f8;
+  font-size: larger;
+}
+
+.line {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #f8f8f8;;
+}
+
+.link-icons a {
+  padding: 0.25em;
+  font-size: 6em;
+  color: #282828;
+}
+
+.link-icons svg {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+}
+
+@keyframes pop {
+  from {width: 50%;}
+  to {width: 100%;}
+}

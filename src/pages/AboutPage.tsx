@@ -1,15 +1,13 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import About from '../components/AboutSection'
+import Header from '../components/AboutPage/Header'
+import Footer from '../components/AboutPage/Footer'
+import AboutSection from '../components/AboutPage/AboutSection'
 
-function AboutPage() {
+export default function AboutPage() {
   return (
     <>
       <Header></Header>
-      <About></About>
+      <AboutSection></AboutSection>
       <Footer></Footer>
     </>
   )
 }
-
-export default AboutPage
