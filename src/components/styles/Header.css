@@ -1,0 +1,13 @@
+.header {
+  padding: 1rem;
+  margin: auto;
+}
+
+.header__var {
+  font-weight: 400;
+  margin-right: 10rem;
+}
+
+.header__mini-bio {
+  text-align: center;
+}

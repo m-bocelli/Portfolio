@@ -1,0 +1,47 @@
+.nav {
+  position: sticky;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: paleturquoise;
+}
+
+.nav__title {
+  float: left;
+  font-family: 'Libre Barcode 39 Text';
+  font-size: 4rem;
+  margin-left: 1rem;
+}
+
+.nav__list-container {
+  height: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  mask-image: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 1.75rem);
+}
+
+.nav__list {
+  width: max-content;
+  display: flex;
+  list-style: none;
+  gap: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.8rem;
+}
+
+/* 
+Whitespace gradient that indicates overflow to 
+the right of the navbar
+*/
+.nav__list::after {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  content: '-';
+  color: paleturquoise;
+  align-items: center;
+  padding-left: 2.5rem;
+  background: linear-gradient(to left, paleturquoise 1.1rem, transparent);
+}
