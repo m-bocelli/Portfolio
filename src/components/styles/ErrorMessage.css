@@ -1,0 +1,9 @@
+.error-message {
+  font-weight: 200;
+  padding: 3rem;
+}
+
+.error-message__link {
+  font-weight: 700;
+  color: #fff;
+}

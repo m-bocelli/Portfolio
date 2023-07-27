@@ -1,10 +1,13 @@
+import { NavLink } from 'react-router-dom';
 import '../styles/Navbar.css';
 import { NavButton } from '../utilities';
 
 export function Navbar() {
   return (
     <nav className='nav'>
-      <div className='nav__title'>MB</div>
+      <div className='nav__title'>
+        <NavLink to={'/'}>MB</NavLink>
+      </div>
       <div className='nav__list-container'>
         <ul className='nav__list'>
           <NavButton pageName={'home'}></NavButton>

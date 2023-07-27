@@ -1,14 +1,19 @@
 .nav-button {
   padding: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .nav-button__text {
+  color: #282828;
   position: relative;
   text-decoration: none;
-  color: black;
   font-size: 1.2rem;
   font-weight: 400;
   transition: font-size 500ms;
+}
+
+.nav-button__text a.active {
+  background-color: #fff;
 }
 
 /*
@@ -33,5 +38,5 @@ hover
 }
 
 .nav-button__text:hover {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }

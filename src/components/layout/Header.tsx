@@ -1,9 +1,14 @@
+import { Canvas } from '@react-three/fiber';
+import HeadScene from '../scenes/HeadScene';
 import '../styles/Header.css';
 
 export function Header() {
   return (
-    <div className='header'>
+    <section className='header'>
       <h1>MICHAEL BOCELLI</h1>
+      <Canvas>
+        <HeadScene></HeadScene>
+      </Canvas>
       <div>
         <div className='header__var'>
           <span style={{ color: 'paleturquoise', fontWeight: '700' }}>
@@ -16,6 +21,6 @@ export function Header() {
           <span style={{ fontWeight: '400' }}>;</span>
         </blockquote>
       </div>
-    </div>
+    </section>
   );
 }

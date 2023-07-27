@@ -1,6 +1,14 @@
 .header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
-  margin: auto;
+  min-height: 81vh;
+  max-height: 81vh;
+}
+
+.header h1 {
+  margin-bottom: 0;
 }
 
 .header__var {

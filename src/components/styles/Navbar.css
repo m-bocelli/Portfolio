@@ -1,15 +1,23 @@
 .nav {
   position: sticky;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background-color: paleturquoise;
+  top: 0;
+  z-index: 2;
 }
 
 .nav__title {
-  float: left;
+  position: relative;
   font-family: 'Libre Barcode 39 Text';
   font-size: 4rem;
   margin-left: 1rem;
+}
+
+.nav__title a {
+  color: #fff;
 }
 
 .nav__list-container {
@@ -26,7 +34,7 @@
   list-style: none;
   gap: 0.75rem;
   padding-left: 1.5rem;
-  padding-right: 1.8rem;
+  padding-right: 2rem;
 }
 
 /* 
