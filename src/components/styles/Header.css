@@ -12,10 +12,17 @@
 }
 
 .header__var {
+  margin-top: 1rem;
   font-weight: 400;
   margin-right: 10rem;
 }
 
 .header__mini-bio {
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header code {
+  background-color: #3d3d3d;
+  border-radius: 5px;
 }

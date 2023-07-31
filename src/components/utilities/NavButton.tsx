@@ -7,7 +7,9 @@ export function NavButton({ pageName }: { pageName: string }): JSX.Element {
       <li className='navButton'>
         <NavLink
           to={'./'.concat(pageName.toLowerCase())}
-          className={'nav-button__text'}
+          className={({ isActive }) =>
+            isActive ? 'nav-button__text--active' : 'nav-button__text--passive'
+          }
         >
           {pageName.toUpperCase()}
         </NavLink>

@@ -4,7 +4,7 @@ export function Home() {
   return (
     <>
       <lay.Header />
-      <lay.About />
+      <lay.Languages />
     </>
   );
 }

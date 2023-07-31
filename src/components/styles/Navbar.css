@@ -2,22 +2,28 @@
   position: sticky;
   display: flex;
   align-items: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: paleturquoise;
   top: 0;
   z-index: 2;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  justify-content: center;
 }
 
-.nav__title {
+.nav__icon {
   position: relative;
   font-family: 'Libre Barcode 39 Text';
   font-size: 4rem;
   margin-left: 1rem;
 }
 
-.nav__title a {
+.nav__icon a {
   color: #fff;
+  transition: font-size 500ms;
+}
+
+.nav__icon a:hover {
+  color: #fff;
+  font-size: larger;
 }
 
 .nav__list-container {
@@ -41,6 +47,7 @@
 Whitespace gradient that indicates overflow to 
 the right of the navbar
 */
+/*
 .nav__list::after {
   display: flex;
   position: absolute;
@@ -48,8 +55,9 @@ the right of the navbar
   top: 0;
   height: 100%;
   content: '-';
-  color: paleturquoise;
+  color: #282828;
   align-items: center;
   padding-left: 2.5rem;
-  background: linear-gradient(to left, paleturquoise 1.1rem, transparent);
+  background: linear-gradient(to left, #000, 1rem, transparent);
 }
+*/

@@ -3,40 +3,43 @@
   border-radius: 0.5rem;
 }
 
-.nav-button__text {
-  color: #282828;
+.nav-button__text--passive,
+.nav-button__text--active {
+  color: #fff;
+  padding: 0.75rem;
   position: relative;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 400;
-  transition: font-size 500ms;
 }
 
-.nav-button__text a.active {
-  background-color: #fff;
+.nav-button__text--active {
+  background-color: paleturquoise;
+  border-radius: 3px;
+  color: #282828;
 }
 
 /*
 Underscore that appears beneath nav button on
 hover
 */
-.nav-button__text::before {
+.nav-button__text--passive::before {
   content: '';
   position: absolute;
   display: block;
   width: 100%;
   height: 1.5px;
-  bottom: 0;
+  bottom: 20%;
   left: 0;
-  background-color: #000000;
+  background-color: #fff;
   transform: scaleX(0);
   transition: transform 0.3s;
 }
 
-.nav-button__text:hover::before {
-  transform: scaleX(1);
+.nav-button__text--passive:hover::before {
+  transform: scaleX(0.5);
 }
 
-.nav-button__text:hover {
-  font-size: 1.3rem;
+.nav-button__text--passive:hover {
+  /* Slowly fill background with what it will look like when active */
 }
