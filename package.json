@@ -1,28 +1,30 @@
 {
-  "name": "portfolio-react",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@react-three/fiber": "^8.13.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.10.1",
-    "react-router-dom": "^6.13.0",
-    "three": "^0.154.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
-    "@types/three": "^0.154.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "prettier": "3.0.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.3.9"
-  }
+    "name": "portfolio-react",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@react-three/drei": "^9.80.0",
+        "@react-three/fiber": "^8.13.5",
+        "axios": "^1.4.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.10.1",
+        "react-router-dom": "^6.13.0",
+        "three": "^0.154.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.37",
+        "@types/react-dom": "^18.0.11",
+        "@types/three": "^0.154.0",
+        "@vitejs/plugin-react": "^4.0.0",
+        "prettier": "3.0.0",
+        "typescript": "^5.0.2",
+        "vite": "^4.3.9"
+    }
 }

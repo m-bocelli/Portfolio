@@ -1,28 +1,34 @@
 .nav-button {
-  padding: 0.25rem;
-  border-radius: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
 }
 
 .nav-button__text--passive,
 .nav-button__text--active {
-  color: #fff;
-  padding: 0.75rem;
-  position: relative;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 400;
+    color: var(--text);
+    padding: 0.75rem;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: color 1s;
 }
 
 .nav-button__text--active {
-  background-color: paleturquoise;
-  border-radius: 3px;
-  color: #282828;
+    background-color: var(--highlight);
+    border-radius: 3px;
+    color: var(--dark);
 }
+
+/*
+Below are two transition options. I'm still trying to decide what's best...
+*/
 
 /*
 Underscore that appears beneath nav button on
 hover
 */
+/*
 .nav-button__text--passive::before {
   content: '';
   position: absolute;
@@ -39,7 +45,27 @@ hover
 .nav-button__text--passive:hover::before {
   transform: scaleX(0.5);
 }
+*/
+
+/* Slowly fill background with what it will look like when active */
+.nav-button__text--passive::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: var(--highlight);
+    z-index: -1;
+    border-radius: 3px;
+    transform: scaleY(0);
+    transition: transform 1s;
+}
+
+.nav-button__text--passive:hover::after {
+    transform: scaleY(1);
+}
 
 .nav-button__text--passive:hover {
-  /* Slowly fill background with what it will look like when active */
+    color: var(--dark);
 }

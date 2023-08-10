@@ -1,46 +1,45 @@
 .nav {
-  position: sticky;
-  display: flex;
-  align-items: center;
-  top: 0;
-  z-index: 2;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  justify-content: center;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
 }
 
 .nav__icon {
-  position: relative;
-  font-family: 'Libre Barcode 39 Text';
-  font-size: 4rem;
-  margin-left: 1rem;
+    position: relative;
+    font-family: 'Libre Barcode 39 Text';
+    font-size: 4rem;
+    margin-left: 1rem;
+    margin-top: auto;
 }
 
 .nav__icon a {
-  color: #fff;
-  transition: font-size 500ms;
+    color: var(--text);
+    transition: font-size 500ms;
 }
 
 .nav__icon a:hover {
-  color: #fff;
-  font-size: larger;
+    font-size: larger;
 }
 
 .nav__list-container {
-  height: 100%;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  mask-image: none;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 1.75rem);
+    height: 100%;
+    overflow-x: scroll;
+    mask-image: none;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 1.75rem);
 }
 
 .nav__list {
-  width: max-content;
-  display: flex;
-  list-style: none;
-  gap: 0.75rem;
-  padding-left: 1.5rem;
-  padding-right: 2rem;
+    width: max-content;
+    display: flex;
+    list-style: none;
+    gap: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
 }
 
 /* 
@@ -61,3 +60,9 @@ the right of the navbar
   background: linear-gradient(to left, #000, 1rem, transparent);
 }
 */
+
+@media only screen and (min-width: 555px) {
+    .nav__list-container {
+        scrollbar-width: none;
+    }
+}
