@@ -1,0 +1,12 @@
+.subheader {
+    margin-left: 1rem;
+    margin-right: auto;
+}
+
+.subheader::after {
+    content: '';
+    display: block;
+    height: 0.2rem;
+    width: 100%;
+    background-color: var(--text);
+}

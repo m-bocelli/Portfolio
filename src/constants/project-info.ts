@@ -1,5 +1,6 @@
 export type Project = {
     title: string;
+    image: string;
     description: string;
     stack: string[];
     resources: string[];
@@ -12,6 +13,8 @@ export type _Date = {
     year: number;
 };
 
+/*
+// Hard coded project list for backup
 export const PROJECTS: Project[] = [
     {
         title: 'Boids Simulation',
@@ -76,3 +79,4 @@ export const PROJECTS: Project[] = [
         updated: { month: 6, year: 2020 },
     },
 ];
+*/

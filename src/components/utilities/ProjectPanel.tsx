@@ -13,8 +13,15 @@ export function ProjectPanel({ project }: { project: Project }): JSX.Element {
             <h3 className='project-panel__title'>
                 {project.title.toUpperCase()}
             </h3>
+            <div className='project-panel__image-containter'>
+                <img className='project-panel__image' src={project.image}></img>
+            </div>
             <p>
-                <a className='project-panel__source-link' href={project.source}>
+                <a
+                    className='project-panel__source-link'
+                    href={project.source}
+                    target='_blank'
+                >
                     {'<'}
                     <span className='project-panel__source-link__space'> </span>
                     {'>'}
@@ -22,7 +29,7 @@ export function ProjectPanel({ project }: { project: Project }): JSX.Element {
                 Updated {project.updated.month}. {project.updated.year}
             </p>
             <p>{project.description}</p>
-            <span>Tech</span>
+            <p>Tech</p>
             <ul className='project-panel__tech-stack'>{techStack}</ul>
             <ul className='project-panel__resource-list'>{resourceList}</ul>
         </div>

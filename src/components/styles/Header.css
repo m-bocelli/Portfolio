@@ -7,7 +7,7 @@
 }
 
 .header h1 {
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .header__var {
@@ -25,7 +25,7 @@
     background-color: #3d3d3d;
     border-radius: 5px;
     width: fit-content;
-    margin: auto;
+    margin: 2.5rem auto 0 auto;
 }
 
 .header__image {

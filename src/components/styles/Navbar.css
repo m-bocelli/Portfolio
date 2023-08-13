@@ -24,6 +24,7 @@
 
 .nav__icon a:hover {
     font-size: larger;
+    color: var(--highlight);
 }
 
 .nav__list-container {

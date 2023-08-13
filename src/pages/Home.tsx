@@ -1,11 +1,14 @@
-import { lay } from '../components';
+import { lay, util } from '../components';
 
 export function Home() {
     return (
         <>
             <lay.Header />
             <lay.FlexContainer>
-                <div>Hi</div>
+                <lay.Subheader>Bio</lay.Subheader>
+                bluh
+                <lay.Subheader>Interests</lay.Subheader>
+                <util.InterestList></util.InterestList>
             </lay.FlexContainer>
         </>
     );
