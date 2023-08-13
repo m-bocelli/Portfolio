@@ -1,4 +1,4 @@
-import '../styles/FlexContainer.css';
+import '../../styles/FlexContainer.css';
 
 export function FlexContainer({
     children,

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import '../styles/ErrorMessage.css';
+import '../../styles/ErrorMessage.css';
 
 export function ErrorMessage() {
     return (

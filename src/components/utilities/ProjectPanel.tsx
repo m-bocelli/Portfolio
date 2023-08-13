@@ -1,4 +1,4 @@
-import '../styles/ProjectPanel.css';
+import '../../styles/ProjectPanel.css';
 import { Project } from '../../constants/project-info';
 
 export function ProjectPanel({ project }: { project: Project }): JSX.Element {

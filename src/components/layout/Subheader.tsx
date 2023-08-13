@@ -1,4 +1,4 @@
-import '../styles/Subheader.css';
+import '../../styles/Subheader.css';
 
 export function Subheader({
     children,

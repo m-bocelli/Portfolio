@@ -1,5 +1,5 @@
-import '../styles/Header.css';
-import bust from '../assets/bust_transparent.png';
+import '../../styles/Header.css';
+import bust from '../../assets/bust_transparent.png';
 
 export function Header() {
     return (

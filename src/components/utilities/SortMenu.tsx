@@ -1,4 +1,4 @@
-import '../styles/SortMenu.css';
+import '../../styles/SortMenu.css';
 
 export function SortMenu({
     setSortType,

@@ -1,4 +1,4 @@
-import '../styles/NavButton.css';
+import '../../styles/NavButton.css';
 import { NavLink } from 'react-router-dom';
 
 export function NavButton({ pageName }: { pageName: string }): JSX.Element {
