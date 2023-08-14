@@ -12,15 +12,19 @@ export function Projects() {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        sortProjects(sortType);
-    }, [sortType]);
-
-    useEffect(() => {
         getRepos();
     }, []);
 
+    /*
+    useEffect(() => {
+        sortProjects(sortType);
+    }, [sortType]);
+    */
+
     const getRepos = async () => {
-        const response = await axios.get(REPOS_URL);
+        const response = await axios.get(REPOS_URL, {
+            params: { sort: 'pushed' },
+        });
         setLoading(false);
         constructProjectList(response.data);
     };
@@ -34,7 +38,7 @@ export function Projects() {
                 resources: [...project.resources],
             })),
         ];
-
+        console.log(projectList);
         setProjectList(
             projectListDeepCopy.sort((projectA, projectB) =>
                 _sortType === 0
@@ -55,8 +59,8 @@ export function Projects() {
                     resources: [repo.html_url + '/blob/main/README.md'],
                     source: repo.html_url,
                     updated: {
-                        month: repo.updated_at.slice(0, 4),
-                        year: repo.updated_at.slice(5, 7),
+                        month: parseInt(repo.pushed_at.slice(0, 4)),
+                        year: parseInt(repo.pushed_at.slice(5, 7)),
                     },
                 })
             )
@@ -72,7 +76,6 @@ export function Projects() {
 
     return (
         <>
-            <util.SortMenu setSortType={setSortType}></util.SortMenu>
             <lay.FlexContainer>
                 {loading ? 'loading projects...' : ProjectPanels}
             </lay.FlexContainer>

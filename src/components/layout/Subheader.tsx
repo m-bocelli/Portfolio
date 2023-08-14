@@ -5,5 +5,9 @@ export function Subheader({
 }: {
     children: React.ReactNode;
 }): JSX.Element {
-    return <h3 className='subheader'>{children}</h3>;
+    return (
+        <h3 className='subheader' scroll-anim='true'>
+            {children}
+        </h3>
+    );
 }

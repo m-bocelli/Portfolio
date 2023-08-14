@@ -28,3 +28,17 @@
 body {
     margin: 0;
 }
+
+.hidden {
+    opacity: 0;
+    filter: blur(5x);
+    transform: translateX(-100%);
+    transition: 0.5s;
+    transition-property: transform, filter;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

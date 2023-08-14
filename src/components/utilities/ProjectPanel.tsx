@@ -1,7 +1,12 @@
 import '../../styles/ProjectPanel.css';
 import { Project } from '../../constants/project-info';
+import { useEffect } from 'react';
+import { observeOnScroll } from '../../scripts/observe-on-scroll';
 
 export function ProjectPanel({ project }: { project: Project }): JSX.Element {
+    useEffect(() => {
+        observeOnScroll();
+    }, []);
     const techStack = project.stack.map((techItem: string, index: number) => (
         <li key={index}>{techItem}</li>
     ));
@@ -9,7 +14,7 @@ export function ProjectPanel({ project }: { project: Project }): JSX.Element {
         (resource: string, index: number) => <li key={index}>{resource}</li>
     );
     return (
-        <div className='project-panel__container'>
+        <div className='project-panel__container' scroll-anim='true'>
             <h3 className='project-panel__title'>
                 {project.title.toUpperCase()}
             </h3>

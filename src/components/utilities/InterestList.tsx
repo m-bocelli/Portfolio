@@ -1,8 +1,11 @@
+import '../../styles/InterestList.css';
 export function InterestList(): JSX.Element {
     return (
-        <ul style={{ textAlign: 'left' }}>
-            <li>gli</li>
-            <li>gli</li>
+        <ul className='interest-list__list'>
+            <li scroll-anim='true'>FullStack development</li>
+            <li scroll-anim='true'>Game dev.</li>
+            <li scroll-anim='true'>3D modeling</li>
+            <li scroll-anim='true'>Weightlifting</li>
         </ul>
     );
 }
