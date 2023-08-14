@@ -12,6 +12,11 @@ export type _Date = {
     year: number;
 };
 
+export type NestedListItem = {
+    title: string;
+    desc: string[];
+};
+
 /*
 // Hard coded project list for backup
 export const PROJECTS: Project[] = [

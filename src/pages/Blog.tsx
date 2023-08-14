@@ -1,3 +1,7 @@
 export function Blog() {
-    return <></>;
+    return (
+        <>
+            <p style={{ textAlign: 'center' }}>no blogs yet...</p>
+        </>
+    );
 }
