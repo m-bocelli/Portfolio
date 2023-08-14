@@ -10,9 +10,7 @@ export function ProjectPanel({ project }: { project: Project }): JSX.Element {
     const techStack = project.stack.map((techItem: string, index: number) => (
         <li key={index}>{techItem}</li>
     ));
-    const resourceList = project.resources.map(
-        (resource: string, index: number) => <li key={index}>{resource}</li>
-    );
+
     return (
         <div className='project-panel__container' scroll-anim='true'>
             <h3 className='project-panel__title'>
@@ -36,7 +34,6 @@ export function ProjectPanel({ project }: { project: Project }): JSX.Element {
             <p>{project.description}</p>
             <p>Tech</p>
             <ul className='project-panel__tech-stack'>{techStack}</ul>
-            <ul className='project-panel__resource-list'>{resourceList}</ul>
         </div>
     );
 }

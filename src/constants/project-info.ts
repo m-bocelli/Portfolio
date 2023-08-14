@@ -3,7 +3,6 @@ export type Project = {
     image: string;
     description: string;
     stack: string[];
-    resources: string[];
     source: string;
     updated: _Date;
 };
