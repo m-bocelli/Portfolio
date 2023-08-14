@@ -8,7 +8,7 @@ export function NestedList({
 }) {
     const items = NestedListItems.map((item) => {
         return (
-            <li key={item.title}>
+            <li key={item.title} scroll-anim='true'>
                 <strong>{item.title}</strong>
                 <ul>
                     {item.desc.map((descItem) => {

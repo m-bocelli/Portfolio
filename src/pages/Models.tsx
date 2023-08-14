@@ -1,3 +1,7 @@
 export function Models() {
-    return <></>;
+    return (
+        <>
+            <p style={{ textAlign: 'center' }}>models soon...</p>
+        </>
+    );
 }

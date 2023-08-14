@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import { lay, util } from '../components';
 import { NestedListItem } from '../constants/project-info';
+import { observeOnScroll } from '../scripts/observe-on-scroll';
 
 export function Resume() {
+    useEffect(() => {
+        observeOnScroll();
+    }, []);
+
     const education: NestedListItem[] = [
         {
             title: 'University of Delaware',
@@ -41,7 +47,7 @@ export function Resume() {
             desc: ['2023'],
         },
         {
-            title: 'Presidential Achievement - Marconetti scholarship',
+            title: 'Presidential Achievement - Marconetti Scholarship',
             desc: ['2022 - Current'],
         },
     ];
