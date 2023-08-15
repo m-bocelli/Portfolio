@@ -1,5 +1,9 @@
 import '../../styles/Links.css';
-import { FaItchIo, FaLinkedin, FaInstagram } from 'react-icons/Fa';
+import {
+    FaItchIo,
+    FaLinkedin,
+    FaInstagram,
+} from '../../../node_modules/react-icons/fa';
 
 export function Links(): JSX.Element {
     return (
