@@ -17,10 +17,11 @@
 }
 
 .project-panel__image {
-    width: auto;
-    max-width: 150px;
-    height: auto;
-    max-height: 100px;
+    max-width: 250px;
+    width: min-content;
+    border: 5px solid var(--highlight);
+    border-radius: 5px;
+    background-color: var(--highlight);
 }
 
 p {

@@ -68,22 +68,26 @@ export function Projects() {
     */
 
     const ProjectPanels = repos
-        ? repos.map((repo: Repo) => (
-              <util.ProjectPanel
-                  project={{
-                      title: repo.name,
-                      image: 'logo.png',
-                      description: repo.description,
-                      stack: repo.topics,
-                      source: repo.html_url,
-                      updated: {
-                          month: parseInt(repo.pushed_at.slice(0, 4)),
-                          year: parseInt(repo.pushed_at.slice(5, 7)),
-                      },
-                  }}
-                  key={repo.name}
-              ></util.ProjectPanel>
-          ))
+        ? repos.map((repo: Repo) =>
+              repo.name !== 'tasks' ? (
+                  <util.ProjectPanel
+                      project={{
+                          title: repo.name,
+                          image: repo.name + '.png',
+                          description: repo.description,
+                          stack: repo.topics,
+                          source: repo.html_url,
+                          updated: {
+                              month: parseInt(repo.pushed_at.slice(0, 4)),
+                              year: parseInt(repo.pushed_at.slice(5, 7)),
+                          },
+                      }}
+                      key={repo.name}
+                  ></util.ProjectPanel>
+              ) : (
+                  <></>
+              )
+          )
         : null;
 
     return (
