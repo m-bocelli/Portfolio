@@ -3,11 +3,20 @@ import {
     FaItchIo,
     FaLinkedin,
     FaInstagram,
+    FaGithub,
 } from '../../../node_modules/react-icons/fa';
 
 export function Links(): JSX.Element {
     return (
         <div className='link__container'>
+            <a
+                className='link__icon'
+                href='https://github.com/m-bocelli'
+                target='_blank'
+            >
+                <FaGithub />
+            </a>
+
             <a
                 className='link__icon'
                 href='https://mikeyyyyyyyyyyyyyyyyyyyyy.itch.io/'
