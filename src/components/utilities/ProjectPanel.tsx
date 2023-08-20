@@ -1,5 +1,5 @@
 import '../../styles/ProjectPanel.css';
-import { Project } from '../../constants/project-info';
+import { Project } from '../../constants/types';
 import { useEffect } from 'react';
 import { observeOnScroll } from '../../scripts/observe-on-scroll';
 

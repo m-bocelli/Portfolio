@@ -1,4 +1,4 @@
-import { NestedListItem } from '../../constants/project-info';
+import { NestedListItem } from '../../constants/types';
 import '../../styles/NestedList.css';
 
 export function NestedList({

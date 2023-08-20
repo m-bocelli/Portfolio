@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { lay, util } from '../components';
-import { NestedListItem } from '../constants/project-info';
+import { NestedListItem } from '../constants/types';
 import { observeOnScroll } from '../scripts/observe-on-scroll';
 
 export function Resume() {

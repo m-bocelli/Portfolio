@@ -1,4 +1,4 @@
-import { _Date } from '../constants/project-info';
+import { _Date } from '../constants/types';
 
 /*
     Returns whether dateA is before dateB.
