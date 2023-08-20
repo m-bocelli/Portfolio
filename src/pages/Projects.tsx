@@ -16,8 +16,8 @@ export type Repo = {
 type PlaceHolderText = 'loading projects...' | 'failed to fetch projects';
 
 export function Projects() {
-    //const [sortType, setSortType] = useState<number>(0); // 0 -> Descending, 1 -> Ascending
-    const [placeHolder, setPlaceHolder] = useState<PlaceHolderText>(
+    //const [sortType, setSortType] = uSseState<number>(0); // 0 -> Descending, 1 -> Ascending
+    const [placeHolderText, setPlaceHolderText] = useState<PlaceHolderText>(
         'loading projects...'
     );
     const [loading, setLoading] = useState<boolean>(true);
@@ -32,7 +32,6 @@ export function Projects() {
         sortProjects(sortType);
     }, [sortType]);
     */
-
     const getRepos = async () => {
         await axios
             .get(REPOS_URL, { params: { sort: 'pushed' } })
@@ -42,8 +41,9 @@ export function Projects() {
                 setRepos(response.data);
             })
             .catch((error) => {
+                setLoading(false);
                 console.log(error);
-                setPlaceHolder('failed to fetch projects');
+                setPlaceHolderText('failed to fetch projects');
             });
     };
 
@@ -67,10 +67,11 @@ export function Projects() {
     };
     */
 
-    const ProjectPanels = repos
+    const projectPanels = repos
         ? repos.map((repo: Repo) =>
               repo.name !== 'tasks' ? (
                   <util.ProjectPanel
+                      key={repo.html_url}
                       project={{
                           title: repo.name,
                           image: repo.name + '.png',
@@ -82,18 +83,31 @@ export function Projects() {
                               year: parseInt(repo.pushed_at.slice(5, 7)),
                           },
                       }}
-                      key={repo.name}
                   ></util.ProjectPanel>
-              ) : (
-                  <></>
-              )
+              ) : null
           )
         : null;
+
+    const content =
+        placeHolderText === 'failed to fetch projects' ? (
+            <div>
+                <div>{placeHolderText}</div>
+                <a
+                    href='https://github.com/m-bocelli?tab=repositories'
+                    target='_blank'
+                    style={{ color: 'var(--text)' }}
+                >
+                    see GitHub
+                </a>
+            </div>
+        ) : (
+            projectPanels
+        );
 
     return (
         <>
             <lay.FlexContainer>
-                {loading ? placeHolder : ProjectPanels}
+                {loading ? placeHolderText : content}
             </lay.FlexContainer>
         </>
     );
