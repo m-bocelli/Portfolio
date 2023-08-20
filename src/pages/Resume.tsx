@@ -8,10 +8,12 @@ export function Resume() {
         observeOnScroll();
     }, []);
 
+    const gpa = 3.97;
+
     const education: NestedListItem[] = [
         {
             title: 'University of Delaware',
-            desc: ['B.S. in computer science', 'Expected May 2024'],
+            desc: ['B.S. in computer science', 'Expected December 2024'],
         },
         {
             title: 'Universität Leipzig (study abroad)',
@@ -24,12 +26,19 @@ export function Resume() {
 
     const experience: NestedListItem[] = [
         {
-            title: 'Teaching Assistant for CISC275: Intor to Software Engineering',
+            title: 'Teaching Assistant for CISC275: Intro to Software Engineering',
             desc: ['University of Delaware', 'August 2023 - Current'],
         },
         {
             title: 'Teaching Assistant for CISC106: General CS for Engineers',
             desc: ['University of Delaware', 'August 2022 – December 2022'],
+        },
+        {
+            title: 'Charity Livestream Producer',
+            desc: [
+                'Raised over $1000 for the AbleGamers Foundation and the Chester County Foodbank respectively',
+                'December 2018 - Current',
+            ],
         },
         {
             title: 'Pool Manager/Supervisor and Valet Driver',
@@ -54,6 +63,7 @@ export function Resume() {
     return (
         <>
             <lay.FlexContainer>
+                <h2>GPA: {`${gpa}`}</h2>
                 <lay.Subheader>Education</lay.Subheader>
                 <util.NestedList NestedListItems={education} />
                 <lay.Subheader>Experience</lay.Subheader>
