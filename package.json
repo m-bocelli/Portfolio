@@ -1,26 +1,27 @@
 {
     "name": "portfolio",
+    "author": "Michael Bocelli",
+    "description": "computer science portfolio",
     "private": true,
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "preview": "vite preview"
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
     },
     "dependencies": {
         "axios": "^1.4.0",
+        "next": "^13.4.19",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-icons": "^4.10.1",
-        "react-router-dom": "^6.13.0"
+        "react-icons": "^4.10.1"
     },
     "devDependencies": {
         "@types/react": "^18.0.37",
         "@types/react-dom": "^18.0.11",
-        "@vitejs/plugin-react": "^4.0.0",
         "prettier": "3.0.0",
-        "typescript": "^5.0.2",
-        "vite": "^4.3.9"
+        "typescript": "^5.0.2"
     }
 }
