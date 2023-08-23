@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { NestedListItem } from '../constants/types';
 import { observeOnScroll } from '../scripts/observe-on-scroll';
-import FlexContainer from '../components/FlexContainer';
-import NestedList from '../components/NestedList';
-import Subheader from '../components/Subheader';
+import FlexContainer from '../components/FlexContainer/FlexContainer';
+import NestedList from '../components/NestedList/NestedList';
+import Subheader from '../components/Subheader/Subheader';
 
 export default function Resume() {
     useEffect(() => {

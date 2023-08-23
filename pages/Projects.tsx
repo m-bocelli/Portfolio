@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 //import compareDates from '../scripts/comapre-dates';
 import axios from 'axios';
-import ProjectPanel from '../components/ProjectPanel';
-import FlexContainer from '../components/FlexContainer';
+import ProjectPanel from '../components/ProjectPanel/ProjectPanel';
+import FlexContainer from '../components/FlexContainer/FlexContainer';
 
 const REPOS_URL = 'http://api.github.com/users/m-bocelli/repos';
 

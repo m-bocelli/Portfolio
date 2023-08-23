@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import NavButton from './NavButton';
+import NavButton from '../Navbutton/NavButton';
+import styles from './Navbar.module.css';
 
 export default function Navbar() {
     return (

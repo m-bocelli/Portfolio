@@ -1,6 +1,6 @@
-import { Project } from '../constants/types';
+import { Project } from '../../constants/types';
 import { useEffect } from 'react';
-import { observeOnScroll } from '../scripts/observe-on-scroll';
+import { observeOnScroll } from '../../scripts/observe-on-scroll';
 
 export default function ProjectPanel({
     project,
