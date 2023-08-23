@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
-import { lay, util } from '../components';
 import { NestedListItem } from '../constants/types';
 import { observeOnScroll } from '../scripts/observe-on-scroll';
+import FlexContainer from '../components/FlexContainer';
+import NestedList from '../components/NestedList';
+import Subheader from '../components/Subheader';
 
-export function Resume() {
+export default function Resume() {
     useEffect(() => {
         observeOnScroll();
     }, []);
@@ -62,15 +64,15 @@ export function Resume() {
     ];
     return (
         <>
-            <lay.FlexContainer>
+            <FlexContainer>
                 <h2>GPA: {`${gpa}`}</h2>
-                <lay.Subheader>Education</lay.Subheader>
-                <util.NestedList NestedListItems={education} />
-                <lay.Subheader>Experience</lay.Subheader>
-                <util.NestedList NestedListItems={experience} />
-                <lay.Subheader>Merit</lay.Subheader>
-                <util.NestedList NestedListItems={merit} />
-            </lay.FlexContainer>
+                <Subheader>Education</Subheader>
+                <NestedList NestedListItems={education} />
+                <Subheader>Experience</Subheader>
+                <NestedList NestedListItems={experience} />
+                <Subheader>Merit</Subheader>
+                <NestedList NestedListItems={merit} />
+            </FlexContainer>
         </>
     );
 }

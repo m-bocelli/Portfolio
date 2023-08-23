@@ -1,9 +1,12 @@
-import '../../styles/ProjectPanel.css';
-import { Project } from '../../constants/types';
+import { Project } from '../constants/types';
 import { useEffect } from 'react';
-import { observeOnScroll } from '../../scripts/observe-on-scroll';
+import { observeOnScroll } from '../scripts/observe-on-scroll';
 
-export function ProjectPanel({ project }: { project: Project }): JSX.Element {
+export default function ProjectPanel({
+    project,
+}: {
+    project: Project;
+}): JSX.Element {
     useEffect(() => {
         observeOnScroll();
     }, []);

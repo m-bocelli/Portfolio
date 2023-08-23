@@ -1,5 +1,4 @@
-import '../../styles/InterestList.css';
-export function InterestList(): JSX.Element {
+export default function InterestList(): JSX.Element {
     return (
         <ul className='interest-list__list'>
             <li scroll-anim='true'>FullStack development</li>

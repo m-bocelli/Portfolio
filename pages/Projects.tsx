@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { lay, util } from '../components';
 //import compareDates from '../scripts/comapre-dates';
 import axios from 'axios';
+import ProjectPanel from '../components/ProjectPanel';
+import FlexContainer from '../components/FlexContainer';
 
 const REPOS_URL = 'http://api.github.com/users/m-bocelli/repos';
 
@@ -15,7 +16,7 @@ export type Repo = {
 
 type PlaceHolderText = 'loading projects...' | 'failed to fetch projects';
 
-export function Projects() {
+export default function Projects() {
     //const [sortType, setSortType] = uSseState<number>(0); // 0 -> Descending, 1 -> Ascending
     const [placeHolderText, setPlaceHolderText] = useState<PlaceHolderText>(
         'loading projects...'
@@ -70,7 +71,7 @@ export function Projects() {
     const projectPanels = repos
         ? repos.map((repo: Repo) =>
               repo.name !== 'tasks' ? (
-                  <util.ProjectPanel
+                  <ProjectPanel
                       key={repo.html_url}
                       project={{
                           title: repo.name,
@@ -83,7 +84,7 @@ export function Projects() {
                               year: parseInt(repo.pushed_at.slice(5, 7)),
                           },
                       }}
-                  ></util.ProjectPanel>
+                  ></ProjectPanel>
               ) : null
           )
         : null;
@@ -104,11 +105,5 @@ export function Projects() {
             projectPanels
         );
 
-    return (
-        <>
-            <lay.FlexContainer>
-                {loading ? placeHolderText : content}
-            </lay.FlexContainer>
-        </>
-    );
+    return <FlexContainer>{loading ? placeHolderText : content}</FlexContainer>;
 }

@@ -1,6 +1,4 @@
-import '../../styles/FlexContainer.css';
-
-export function FlexContainer({
+export default function FlexContainer({
     children,
 }: {
     children: React.ReactNode;

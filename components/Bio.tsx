@@ -1,6 +1,4 @@
-import '../../styles/Bio.css';
-
-export function Bio(): JSX.Element {
+export default function Bio(): JSX.Element {
     let year: string = 'Third';
     return (
         <div className='bio__text' scroll-anim='true'>

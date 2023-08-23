@@ -1,6 +1,4 @@
-import '../../styles/SortMenu.css';
-
-export function SortMenu({
+export default function SortMenu({
     setSortType,
 }: {
     setSortType: (_: number) => void;

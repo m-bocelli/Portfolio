@@ -1,7 +1,6 @@
-import { NestedListItem } from '../../constants/types';
-import '../../styles/NestedList.css';
+import { NestedListItem } from '../constants/types';
 
-export function NestedList({
+export default function NestedList({
     NestedListItems,
 }: {
     NestedListItems: NestedListItem[];

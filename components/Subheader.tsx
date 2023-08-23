@@ -1,6 +1,4 @@
-import '../../styles/Subheader.css';
-
-export function Subheader({
+export default function Subheader({
     children,
 }: {
     children: React.ReactNode;

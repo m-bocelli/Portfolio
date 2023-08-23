@@ -1,12 +1,11 @@
-import { NavLink } from 'react-router-dom';
-import '../../styles/Navbar.css';
-import { NavButton } from '../utilities';
+import Link from 'next/link';
+import NavButton from './NavButton';
 
-export function Navbar() {
+export default function Navbar() {
     return (
         <nav className='nav'>
             <div className='nav__icon'>
-                <NavLink to={'/'}>MB</NavLink>
+                <Link href='/'>MB</Link>
             </div>
             <div className='nav__list-container'>
                 <ul className='nav__list'>

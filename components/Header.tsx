@@ -1,12 +1,13 @@
-import '../../styles/Header.css';
-import bust from '../../assets/bust_transparent.png';
-
-export function Header() {
+export default function Header() {
     return (
         <div className='header'>
             <h1>MICHAEL BOCELLI</h1>
             <div>
-                <img className='header__image' src={bust} />
+                <img
+                    className='header__image'
+                    src='bust_transparent.png'
+                    alt='my head'
+                />
             </div>
             <div className='header__code'>
                 <code>
