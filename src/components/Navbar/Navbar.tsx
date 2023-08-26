@@ -2,7 +2,7 @@ import Link from 'next/link';
 import NavButton from '../Navbutton/NavButton';
 import styles from './Navbar.module.css';
 
-export default function Navbar() {
+export default function Navbar({ path }: { path: string }) {
     return (
         <nav className={styles.nav}>
             <div className={styles.nav__icon}>
@@ -10,10 +10,10 @@ export default function Navbar() {
             </div>
             <div className={styles.nav__list_container}>
                 <ul className={styles.nav__list}>
-                    <NavButton pageName={'projects'}></NavButton>
-                    <NavButton pageName={'models'}></NavButton>
-                    <NavButton pageName={'resume'}></NavButton>
-                    <NavButton pageName={'blog'}></NavButton>
+                    <NavButton page='projects' path={path}></NavButton>
+                    <NavButton page='models' path={path}></NavButton>
+                    <NavButton page='resume' path={path}></NavButton>
+                    <NavButton page='blog' path={path}></NavButton>
                 </ul>
             </div>
         </nav>

@@ -1,8 +1,14 @@
 import Head from 'next/head';
 import Footer from './Footer/Footer';
 import Navbar from './Navbar/Navbar';
+import type { Router } from 'next/router';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+interface LayoutProps {
+    children: React.ReactNode;
+    router: Router;
+}
+
+export default function Layout(props: LayoutProps) {
     return (
         <>
             <Head>
@@ -12,8 +18,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 />
                 <title>MB Portfolio</title>
             </Head>
-            <Navbar />
-            <main>{children}</main>
+            <Navbar path={props.router.asPath} />
+            <main>{props.children}</main>
             <Footer />
         </>
     );

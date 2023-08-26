@@ -1,17 +1,17 @@
 import Link from 'next/link';
+import styles from './NavButton.module.css';
 
-export default function NavButton({
-    pageName,
-}: {
-    pageName: string;
-}): JSX.Element {
+interface NavButtonProps {
+    page: string;
+    path: string;
+}
+
+export default function NavButton(props: NavButtonProps): JSX.Element {
+    const href = '/'.concat(props.page.toLowerCase());
+    const active = href === props.path;
     return (
-        <>
-            <li className='navButton'>
-                <Link href={'./'.concat(pageName.toLowerCase())}>
-                    {pageName.toUpperCase()}
-                </Link>
-            </li>
-        </>
+        <Link className={active ? styles.active : styles.passive} href={href}>
+            {props.page.toUpperCase()}
+        </Link>
     );
 }

@@ -2,9 +2,9 @@ import type { AppProps } from 'next/app';
 import Layout from '../components/Layout';
 import '../index.css';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
     return (
-        <Layout>
+        <Layout router={router}>
             <Component {...pageProps} />
         </Layout>
     );

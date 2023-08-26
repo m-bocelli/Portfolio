@@ -1,4 +1,5 @@
 import styles from './Bio.module.css';
+
 export default function Bio(): JSX.Element {
     let year: string = 'Third';
     return (
