@@ -27,7 +27,7 @@
     color: var(--highlight);
 }
 
-.nav__list-container {
+.nav__list_container {
     height: 100%;
     overflow-x: scroll;
     mask-image: none;
