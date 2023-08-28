@@ -1,4 +1,4 @@
-.project-panel__container {
+.container {
     padding: 3rem;
     border-radius: 5px;
     background-color: #3d3d3d;
@@ -7,16 +7,16 @@
     margin: 4rem auto 4rem auto;
 }
 
-.project-panel__title {
+.title {
     text-align: center;
 }
 
-.project-panel__tech-stack {
+.stack {
     text-align: left;
     list-style: square;
 }
 
-.project-panel__image {
+.image {
     max-width: 250px;
     width: min-content;
     border: 5px solid var(--highlight);
@@ -24,16 +24,7 @@
     background-color: var(--highlight);
 }
 
-p {
-    text-align: left;
-}
-
-.project-panel__resource-list {
-    text-align: left;
-    list-style: none;
-}
-
-.project-panel__source-link {
+.link {
     margin-right: 1rem;
     color: var(--dark);
     font-weight: 700;
@@ -44,7 +35,7 @@ p {
     transition: font-size 300ms;
 }
 
-.project-panel__source-link:hover {
+.link:hover {
     font-size: larger;
     transform: rotate(60);
 }

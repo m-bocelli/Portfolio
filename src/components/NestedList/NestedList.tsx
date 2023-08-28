@@ -1,5 +1,5 @@
-import { NestedListItem } from '../../constants/types';
-
+import { NestedListItem } from '@/constants/types';
+import styles from './NestedList.module.css';
 export default function NestedList({
     NestedListItems,
 }: {
@@ -18,5 +18,5 @@ export default function NestedList({
         );
     });
 
-    return <ul className='nested-list'>{items}</ul>;
+    return <ul className={styles.nested}>{items}</ul>;
 }

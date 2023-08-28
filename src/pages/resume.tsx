@@ -4,6 +4,7 @@ import { observeOnScroll } from '../scripts/observe-on-scroll';
 import FlexContainer from '../components/FlexContainer/FlexContainer';
 import NestedList from '../components/NestedList/NestedList';
 import Subheader from '../components/Subheader/Subheader';
+import { NextFetchEvent } from 'next/server';
 
 export default function Resume() {
     useEffect(() => {
@@ -36,13 +37,6 @@ export default function Resume() {
             desc: ['University of Delaware', 'August 2022 – December 2022'],
         },
         {
-            title: 'Charity Livestream Producer',
-            desc: [
-                'Raised over $1000 for the AbleGamers Foundation and the Chester County Foodbank respectively',
-                'December 2018 - Current',
-            ],
-        },
-        {
             title: 'Pool Manager/Supervisor and Valet Driver',
             desc: ['Applecross Club Operations LLC', 'May 2021 – August 2022'],
         },
@@ -62,17 +56,28 @@ export default function Resume() {
             desc: ['2022 - Current'],
         },
     ];
+
+    const extracurricular: NestedListItem[] = [
+        {
+            title: 'Charity Livestream Producer',
+            desc: [
+                'Raised over $1000 for the AbleGamers Foundation and the Chester County Foodbank respectively',
+                'December 2018 - Current',
+            ],
+        },
+    ];
+
     return (
-        <>
-            <FlexContainer>
-                <h2>GPA: {`${gpa}`}</h2>
-                <Subheader>Education</Subheader>
-                <NestedList NestedListItems={education} />
-                <Subheader>Experience</Subheader>
-                <NestedList NestedListItems={experience} />
-                <Subheader>Merit</Subheader>
-                <NestedList NestedListItems={merit} />
-            </FlexContainer>
-        </>
+        <FlexContainer>
+            <h2>GPA: {`${gpa}`}</h2>
+            <Subheader>Education</Subheader>
+            <NestedList NestedListItems={education} />
+            <Subheader>Experience</Subheader>
+            <NestedList NestedListItems={experience} />
+            <Subheader>Merit</Subheader>
+            <NestedList NestedListItems={merit} />
+            <Subheader>Extracurricular</Subheader>
+            <NestedList NestedListItems={extracurricular} />
+        </FlexContainer>
     );
 }

@@ -1,18 +1,11 @@
 import { useEffect, useState } from 'react';
 //import compareDates from '../scripts/comapre-dates';
 import axios from 'axios';
-import ProjectPanel from '../components/ProjectPanel/ProjectPanel';
-import FlexContainer from '../components/FlexContainer/FlexContainer';
+import ProjectPanel from '@/components/ProjectPanel/ProjectPanel';
+import FlexContainer from '@/components/FlexContainer/FlexContainer';
+import { Repo } from '@/constants/types';
 
 const REPOS_URL = 'http://api.github.com/users/m-bocelli/repos';
-
-export type Repo = {
-    name: string;
-    description: string;
-    topics: string[];
-    html_url: string;
-    pushed_at: string;
-};
 
 type PlaceHolderText = 'loading projects...' | 'failed to fetch projects';
 
@@ -71,20 +64,7 @@ export default function Projects() {
     const projectPanels = repos
         ? repos.map((repo: Repo) =>
               repo.name !== 'tasks' ? (
-                  <ProjectPanel
-                      key={repo.html_url}
-                      project={{
-                          title: repo.name,
-                          image: repo.name + '.png',
-                          description: repo.description,
-                          stack: repo.topics,
-                          source: repo.html_url,
-                          updated: {
-                              month: parseInt(repo.pushed_at.slice(0, 4)),
-                              year: parseInt(repo.pushed_at.slice(5, 7)),
-                          },
-                      }}
-                  ></ProjectPanel>
+                  <ProjectPanel key={repo.html_url} repo={repo}></ProjectPanel>
               ) : null
           )
         : null;

@@ -1,42 +1,37 @@
-import { Project } from '../../constants/types';
 import { useEffect } from 'react';
-import { observeOnScroll } from '../../scripts/observe-on-scroll';
+import { observeOnScroll } from '@/scripts/observe-on-scroll';
+import type { Repo } from '@/constants/types';
+import styles from './ProjectPanel.module.css';
 
-export default function ProjectPanel({
-    project,
-}: {
-    project: Project;
-}): JSX.Element {
+export default function ProjectPanel({ repo }: { repo: Repo }): JSX.Element {
     useEffect(() => {
         observeOnScroll();
     }, []);
-    const techStack = project.stack.map((techItem: string, index: number) => (
+
+    const techStack = repo.topics.map((techItem: string, index: number) => (
         <li key={index}>{techItem}</li>
     ));
 
     return (
-        <div className='project-panel__container' scroll-anim='true'>
-            <h3 className='project-panel__title'>
-                {project.title.toUpperCase()}
-            </h3>
-            <div className='project-panel__image-containter'>
-                <img className='project-panel__image' src={project.image}></img>
+        <div className={styles.container} scroll-anim='true'>
+            <h3 className={styles.title}>{repo.name.toUpperCase()}</h3>
+            <div className='image_container'>
+                <img
+                    className={styles.image}
+                    src={repo.name.concat('.png')}
+                ></img>
             </div>
             <p>
-                <a
-                    className='project-panel__source-link'
-                    href={project.source}
-                    target='_blank'
-                >
-                    {'<'}
-                    <span className='project-panel__source-link__space'> </span>
-                    {'>'}
+                <a className={styles.link} href={repo.html_url} target='_blank'>
+                    {'< '}
+                    {' >'}
                 </a>
-                Updated {project.updated.month}. {project.updated.year}
+                Updated {parseInt(repo.pushed_at.slice(0, 4))}.{' '}
+                {parseInt(repo.pushed_at.slice(5, 7))}
             </p>
-            <p>{project.description}</p>
-            <p>Tech</p>
-            <ul className='project-panel__tech-stack'>{techStack}</ul>
+            <p>{repo.description}</p>
+            <p style={{ textAlign: 'left' }}>Tech</p>
+            <ul className={styles.stack}>{techStack}</ul>
         </div>
     );
 }

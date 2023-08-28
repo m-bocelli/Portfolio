@@ -1,4 +1,4 @@
-.header {
+.container {
     display: grid;
     align-items: center;
     justify-content: center;
@@ -6,29 +6,29 @@
     min-height: 84vh;
 }
 
-.header h1 {
+.hero_text {
     margin-top: 0;
 }
 
-.header__var {
+.var {
     margin-top: 1rem;
     font-weight: 400;
     margin-right: 10rem;
 }
 
-.header__mini-bio {
+.bio {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.header__code {
+.code {
     background-color: #3d3d3d;
     border-radius: 5px;
     width: fit-content;
-    margin: 2.5rem auto 0 auto;
+    margin: auto;
 }
 
-.header__image {
+.image {
     width: 65%;
     min-width: 40vh;
     overflow: hidden;

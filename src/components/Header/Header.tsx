@@ -1,33 +1,35 @@
-export default function Header() {
+import FlexContainer from '../FlexContainer/FlexContainer';
+import styles from './Header.module.css';
+
+interface HeaderProps {
+    hero: string;
+    image: string;
+    bio: string;
+}
+
+export default function Header(props: HeaderProps) {
     return (
-        <div className='header'>
-            <h1>MICHAEL BOCELLI</h1>
+        <div className={styles.container}>
+            <h1>{props.hero.toUpperCase()}</h1>
             <div>
-                <img
-                    className='header__image'
-                    src='bust_transparent.png'
-                    alt='my head'
-                />
+                <img className={styles.image} src={props.image} alt='my head' />
             </div>
-            <div className='header__code'>
-                <code>
-                    <div className='header__var'>
-                        <span
-                            style={{
-                                color: 'paleturquoise',
-                                fontWeight: '700',
-                            }}
-                        >
-                            const
-                        </span>{' '}
-                        <span>iAmAn = </span>
-                    </div>
-                    <blockquote className='header__mini-bio'>
-                        'Undergraduate software developer.'
-                        <span style={{ fontWeight: '400' }}>;</span>
-                    </blockquote>
-                </code>
-            </div>
+            <code className={styles.code}>
+                <div className={styles.var}>
+                    <span
+                        style={{
+                            color: 'paleturquoise',
+                            fontWeight: '700',
+                        }}
+                    >
+                        const
+                    </span>{' '}
+                    <span>mikey = </span>
+                </div>
+                <blockquote className={styles.bio}>
+                    '{props.bio}'<span style={{ fontWeight: '400' }}>;</span>
+                </blockquote>
+            </code>
         </div>
     );
 }

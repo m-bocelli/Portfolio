@@ -1,10 +1,9 @@
-export type Project = {
-    title: string;
-    image: string;
+export type Repo = {
+    name: string;
     description: string;
-    stack: string[];
-    source: string;
-    updated: _Date;
+    topics: string[];
+    html_url: string;
+    pushed_at: string;
 };
 
 export type _Date = {
