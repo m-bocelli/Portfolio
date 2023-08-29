@@ -15,7 +15,7 @@ export default function Home() {
         <>
             <Header
                 hero='michael bocelli'
-                image='Bust_Transparent.png'
+                image='bust_transparent.png'
                 bio='undergraduate software engineer'
             />
             <FlexContainer>
