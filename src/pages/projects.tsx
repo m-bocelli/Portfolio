@@ -63,7 +63,7 @@ export default function Projects() {
 
     const projectPanels = repos
         ? repos.map((repo: Repo) =>
-              repo.name !== 'tasks' ? (
+              repo.name !== 'tasks-s22' ? (
                   <ProjectPanel key={repo.html_url} repo={repo}></ProjectPanel>
               ) : null
           )

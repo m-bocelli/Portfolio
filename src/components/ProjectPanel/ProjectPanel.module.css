@@ -18,7 +18,6 @@
 
 .image {
     max-width: 250px;
-    width: min-content;
     border: 5px solid var(--highlight);
     border-radius: 5px;
     background-color: var(--highlight);
@@ -38,4 +37,8 @@
 .link:hover {
     font-size: larger;
     transform: rotate(60);
+}
+
+.description {
+    text-align: left;
 }

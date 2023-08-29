@@ -29,7 +29,7 @@ export default function ProjectPanel({ repo }: { repo: Repo }): JSX.Element {
                 Updated {parseInt(repo.pushed_at.slice(0, 4))}.{' '}
                 {parseInt(repo.pushed_at.slice(5, 7))}
             </p>
-            <p>{repo.description}</p>
+            <p className={styles.description}>{repo.description}</p>
             <p style={{ textAlign: 'left' }}>Tech</p>
             <ul className={styles.stack}>{techStack}</ul>
         </div>
