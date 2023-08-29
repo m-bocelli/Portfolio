@@ -1,0 +1,46 @@
+.nav {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+}
+
+.nav__icon {
+    position: relative;
+    font-family: 'Libre Barcode 39 Text';
+    font-size: 4rem;
+    margin-left: 1rem;
+    margin-top: auto;
+}
+
+.nav__icon a {
+    color: var(--text);
+    transition-duration: 500ms;
+    transition-property: font-size, color;
+}
+
+.nav__icon a:hover {
+    font-size: larger;
+    color: var(--highlight);
+}
+
+.nav__list_container {
+    height: 100%;
+    overflow-x: scroll;
+    mask-image: none;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 1.75rem);
+    scrollbar-width: none;
+}
+
+.nav__list {
+    width: max-content;
+    display: flex;
+    list-style: none;
+    gap: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}

@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 84vh;
+}
+
+.hero_text {
+    margin-top: 0;
+}
+
+.var {
+    margin-top: 1rem;
+    font-weight: 400;
+    margin-right: 10rem;
+}
+
+.bio {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.code {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    width: fit-content;
+    margin: auto;
+}
+
+.image {
+    width: 65%;
+    min-width: 40vh;
+    overflow: hidden;
+}
