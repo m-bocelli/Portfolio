@@ -5,7 +5,7 @@ import ProjectPanel from '@/components/ProjectPanel/ProjectPanel';
 import FlexContainer from '@/components/FlexContainer/FlexContainer';
 import { Repo } from '@/constants/types';
 
-const REPOS_URL = 'http://api.github.com/users/m-bocelli/repos';
+const REPOS_URL = 'https://api.github.com/users/m-bocelli/repos';
 
 type PlaceHolderText = 'loading projects...' | 'failed to fetch projects';
 
