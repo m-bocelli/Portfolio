@@ -6,9 +6,7 @@ export function observeOnScroll() {
     });
     const utils = document.querySelectorAll('[scroll-anim]');
     utils.forEach((util) => {
-        if (util.checkVisibility()) {
-            util.classList.add('hidden');
-        }
+        util.classList.add('hidden');
     });
     utils.forEach((util) => {
         observer.observe(util);
