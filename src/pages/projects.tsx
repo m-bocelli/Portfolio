@@ -63,7 +63,7 @@ export default function Projects() {
 
     const projectPanels = repos
         ? repos.map((repo: Repo) =>
-              repo.name !== 'tasks-s22' ? (
+              !repo.topics.includes('school') ? (
                   <ProjectPanel key={repo.html_url} repo={repo}></ProjectPanel>
               ) : null
           )
