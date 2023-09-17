@@ -6,11 +6,23 @@ import FlexContainer from '../components/FlexContainer/FlexContainer';
 import InterestList from '../components/InterestList/InterestList';
 import Subheader from '../components/Subheader/Subheader';
 import Paragraph from '../components/Paragraph/Paragraph';
+import Links from '../components/Links/Links';
+import { Link } from '../constants/types';
 
 export default function Home() {
     useEffect(() => {
         observeOnScroll();
     }, []);
+
+    const links: Link[] = [
+        { title: 'GitHub', url: 'https://github.com/m-bocelli' },
+        {
+            title: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/michael-bocelli/',
+        },
+        { title: 'itch.io', url: 'https://mikeyyyyyyyyyyyyyyyyyyyyy.itch.io/' },
+    ];
+
     return (
         <>
             <Header
@@ -21,7 +33,7 @@ export default function Home() {
             <FlexContainer>
                 <Subheader>Bio</Subheader>
                 <Paragraph>
-                    Third year computer science student residing in
+                    Fourth year computer science student residing in
                     Pennsylvania, US. Functionally fluent in English and German.
                 </Paragraph>
                 <Subheader>Interests</Subheader>
@@ -32,6 +44,7 @@ export default function Home() {
                     <li scroll-anim='true'>Weightlifting</li>
                 </InterestList>
                 <Subheader>Links</Subheader>
+                <Links links={links} />
             </FlexContainer>
         </>
     );

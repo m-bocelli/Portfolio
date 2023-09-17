@@ -16,6 +16,11 @@ export type NestedListItem = {
     desc: string[];
 };
 
+export type Link = {
+    title: string;
+    url: string;
+};
+
 /*
 // Hard coded project list for backup
 export const PROJECTS: Project[] = [
