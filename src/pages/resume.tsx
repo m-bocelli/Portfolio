@@ -61,8 +61,16 @@ export default function Resume() {
         {
             title: 'Charity Livestream Producer',
             desc: [
-                'Raised over $1000 for the AbleGamers Foundation and the Chester County Foodbank respectively',
+                'Raised over $1000 for the AbleGamers Foundation and the Chester County Foodbank',
                 'December 2018 - Current',
+            ],
+        },
+        {
+            title: 'President of the Game Design & Development Club',
+            desc: [
+                'UD registered student organization with approximately 150 members',
+                'Hosting workshops, game jams, and fostering a collaborative environment',
+                'October 2022 - Current',
             ],
         },
     ];
