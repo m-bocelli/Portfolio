@@ -78,6 +78,7 @@ export default function Resume() {
     return (
         <FlexContainer>
             <h2>GPA: {`${gpa}`}</h2>
+            <h3>Email <span style={{color: "var(--highlight)"}}>michael.j.bocelli@gmail.com</span> for a more detailed, PDF formatted resume.</h3>
             <Subheader>Education</Subheader>
             <NestedList NestedListItems={education} />
             <Subheader>Experience</Subheader>
