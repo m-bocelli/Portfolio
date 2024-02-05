@@ -10,7 +10,6 @@ const REPOS_URL = 'https://api.github.com/users/m-bocelli/repos';
 type PlaceHolderText = 'loading projects...' | 'failed to fetch projects';
 
 export default function Projects() {
-    //const [sortType, setSortType] = uSseState<number>(0); // 0 -> Descending, 1 -> Ascending
     const [placeHolderText, setPlaceHolderText] = useState<PlaceHolderText>(
         'loading projects...'
     );
@@ -21,11 +20,6 @@ export default function Projects() {
         getRepos();
     }, []);
 
-    /*
-    useEffect(() => {
-        sortProjects(sortType);
-    }, [sortType]);
-    */
     const getRepos = async () => {
         await axios
             .get(REPOS_URL, { params: { sort: 'pushed' } })
@@ -40,26 +34,6 @@ export default function Projects() {
                 setPlaceHolderText('failed to fetch projects');
             });
     };
-
-    /*
-    const sortProjects = (_sortType: number) => {
-        const projectListDeepCopy = [
-            ...projectList.map((project) => ({
-                ...project,
-                updated: { ...project.updated },
-                stack: [...project.stack],
-            })),
-        ];
-        console.log(projectList);
-        setProjectList(
-            projectListDeepCopy.sort((projectA, projectB) =>
-                _sortType === 0
-                    ? compareDates(projectB.updated, projectA.updated)
-                    : compareDates(projectA.updated, projectB.updated)
-            )
-        );
-    };
-    */
 
     const projectPanels = repos
         ? repos.map((repo: Repo) =>

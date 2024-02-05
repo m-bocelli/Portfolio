@@ -21,6 +21,12 @@ export type Link = {
     url: string;
 };
 
+export type Model = {
+    name: string;
+    desc: string;
+    image_url: string;
+};
+
 /*
 // Hard coded project list for backup
 export const PROJECTS: Project[] = [

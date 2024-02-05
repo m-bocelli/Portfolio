@@ -16,15 +16,16 @@ export default function ProjectPanel({ repo }: { repo: Repo }): JSX.Element {
         <div className={styles.container} scroll-anim='true'>
             <h3 className={styles.title}>{repo.name.toUpperCase()}</h3>
             <div className='image_container'>
-                <img
-                    className={styles.image}
-                    src={repo.name.concat('.png')}
-                ></img>
+                <a href={repo.html_url} target='_blank'>
+                    <img
+                        className={styles.image}
+                        src={repo.name.concat('.png')}
+                    ></img>
+                </a>
             </div>
             <p>
                 <a className={styles.link} href={repo.html_url} target='_blank'>
-                    {'< '}
-                    {' >'}
+                    SRC
                 </a>
                 Updated {parseInt(repo.pushed_at.slice(0, 4))}.{' '}
                 {parseInt(repo.pushed_at.slice(5, 7))}
