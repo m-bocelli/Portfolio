@@ -21,7 +21,7 @@ export default function Layout(props: LayoutProps) {
             </Head>
             <Navbar path={props.router.asPath} />
             <main>{props.children}</main>
-            <Footer year={2023}>Michael Bocelli. All Rights Reserved.</Footer>
+            <Footer year={2024}>Michael Bocelli. All Rights Reserved.</Footer>
         </>
     );
 }

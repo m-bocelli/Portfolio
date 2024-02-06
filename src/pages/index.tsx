@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { observeOnScroll } from '../scripts/observe-on-scroll';
 import Header from '../components/Header/Header';
-import Bio from '../components/Paragraph/Paragraph';
 import FlexContainer from '../components/FlexContainer/FlexContainer';
 import InterestList from '../components/InterestList/InterestList';
 import Subheader from '../components/Subheader/Subheader';

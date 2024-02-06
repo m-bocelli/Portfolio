@@ -16,7 +16,7 @@ export default function Resume() {
     const education: NestedListItem[] = [
         {
             title: 'University of Delaware',
-            desc: ['B.S. in computer science', 'Expected December 2024'],
+            desc: ['B.S. in computer science', 'Expected May 2024'],
         },
         {
             title: 'Universität Leipzig (study abroad)',
@@ -78,7 +78,13 @@ export default function Resume() {
     return (
         <FlexContainer>
             <h2>GPA: {`${gpa}`}</h2>
-            <h3>Email <span style={{color: "var(--highlight)"}}>michael.j.bocelli@gmail.com</span> for a more detailed, PDF formatted resume.</h3>
+            <h3>
+                Email{' '}
+                <span style={{ color: 'var(--highlight)' }}>
+                    michael.j.bocelli@gmail.com
+                </span>{' '}
+                for a more detailed, PDF formatted resume.
+            </h3>
             <Subheader>Education</Subheader>
             <NestedList NestedListItems={education} />
             <Subheader>Experience</Subheader>

@@ -1,0 +1,8 @@
+.container {
+    padding: 3rem;
+    border-radius: 5px;
+    background-color: var(--highlight);
+    color: var(--dark);
+    box-shadow: 7px 7px 10px 1px #161616;
+    margin: 4rem auto 4rem auto;
+}

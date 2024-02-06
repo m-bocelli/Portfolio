@@ -25,6 +25,7 @@ export type Model = {
     name: string;
     desc: string;
     image_url: string;
+    vertices: number;
 };
 
 /*
