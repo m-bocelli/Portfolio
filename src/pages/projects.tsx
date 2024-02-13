@@ -24,13 +24,12 @@ export default function Projects() {
         await axios
             .get(REPOS_URL, { params: { sort: 'pushed' } })
             .then((response) => {
-                console.log('Fetch successful');
                 setLoading(false);
                 setRepos(response.data);
             })
             .catch((error) => {
                 setLoading(false);
-                console.log(error);
+                console.error('error', error);
                 setPlaceHolderText('failed to fetch projects');
             });
     };

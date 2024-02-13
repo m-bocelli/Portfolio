@@ -41,3 +41,8 @@
 .description {
     text-align: left;
 }
+
+.website {
+    text-decoration: none;
+    color: var(--highlight);
+}

@@ -6,3 +6,7 @@
     box-shadow: 7px 7px 10px 1px #161616;
     margin: 4rem auto 4rem auto;
 }
+
+.image {
+    width: 300px;
+}

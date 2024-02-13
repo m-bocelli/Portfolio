@@ -30,6 +30,9 @@ export default function ProjectPanel({ repo }: { repo: Repo }): JSX.Element {
                 Updated {parseInt(repo.pushed_at.slice(0, 4))}.{' '}
                 {parseInt(repo.pushed_at.slice(5, 7))}
             </p>
+            <a className={styles.website} href={repo.homepage} target='_blank'>
+                {repo.homepage}
+            </a>
             <p className={styles.description}>{repo.description}</p>
             <p style={{ textAlign: 'left' }}>Tech</p>
             <ul className={styles.stack}>{techStack}</ul>
