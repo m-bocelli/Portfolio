@@ -17,6 +17,12 @@ export default function Models() {
             image_url: '/ship.png',
             vertices: 7282,
         },
+        {
+            name: 'Sponge with the Suds',
+            desc: 'A rendition of Spongebob when he came down with the suds.',
+            image_url: '/sponge.png',
+            vertices: 11053,
+        },
     ];
     return (
         <FlexContainer>
