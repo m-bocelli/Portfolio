@@ -1,6 +1,5 @@
 import FlexContainer from '@/components/FlexContainer/FlexContainer';
 import ModelPanel from '@/components/ModelPanel/ModelPanel';
-import Paragraph from '@/components/Paragraph/Paragraph';
 import { Model } from '@/constants/types';
 
 export default function Models() {
@@ -27,7 +26,7 @@ export default function Models() {
     return (
         <FlexContainer>
             {models.map((model: Model) => (
-                <ModelPanel model={model}></ModelPanel>
+                <ModelPanel model={model} key={model.name}></ModelPanel>
             ))}
         </FlexContainer>
     );

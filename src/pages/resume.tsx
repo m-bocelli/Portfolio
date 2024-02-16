@@ -1,16 +1,9 @@
-import { useEffect } from 'react';
 import { NestedListItem } from '../constants/types';
-import { observeOnScroll } from '../scripts/observe-on-scroll';
 import FlexContainer from '../components/FlexContainer/FlexContainer';
 import NestedList from '../components/NestedList/NestedList';
 import Subheader from '../components/Subheader/Subheader';
-import { NextFetchEvent } from 'next/server';
 
 export default function Resume() {
-    useEffect(() => {
-        observeOnScroll();
-    }, []);
-
     const gpa = 3.97;
 
     const education: NestedListItem[] = [

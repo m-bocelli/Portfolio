@@ -1,4 +1,4 @@
-export function observeOnScroll() {
+function observeOnScroll() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             entry.target.classList.toggle('show', entry.isIntersecting);
@@ -16,3 +16,5 @@ export function observeOnScroll() {
             observer.unobserve(util);
         });
 }
+
+observeOnScroll();

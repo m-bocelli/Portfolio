@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Footer from './Footer/Footer';
 import Navbar from './Navbar/Navbar';
 import type { Router } from 'next/router';
-import FlexContainer from './FlexContainer/FlexContainer';
 
 interface LayoutProps {
     children: React.ReactNode;

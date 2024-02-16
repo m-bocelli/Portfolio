@@ -1,13 +1,7 @@
-import { useEffect } from 'react';
-import { observeOnScroll } from '@/scripts/observe-on-scroll';
 import type { Repo } from '@/constants/types';
 import styles from './ProjectPanel.module.css';
 
 export default function ProjectPanel({ repo }: { repo: Repo }): JSX.Element {
-    useEffect(() => {
-        observeOnScroll();
-    }, []);
-
     const techStack = repo.topics.map((techItem: string, index: number) => (
         <li key={index}>{techItem}</li>
     ));

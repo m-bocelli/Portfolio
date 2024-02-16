@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { observeOnScroll } from '../scripts/observe-on-scroll';
 import Header from '../components/Header/Header';
 import FlexContainer from '../components/FlexContainer/FlexContainer';
 import InterestList from '../components/InterestList/InterestList';
@@ -9,10 +7,6 @@ import Links from '../components/Links/Links';
 import { Link } from '../constants/types';
 
 export default function Home() {
-    useEffect(() => {
-        observeOnScroll();
-    }, []);
-
     const links: Link[] = [
         { title: 'GitHub', url: 'https://github.com/m-bocelli' },
         {
