@@ -22,6 +22,12 @@ export default function Models() {
             image_url: '/sponge.png',
             vertices: 11053,
         },
+        {
+            name: 'Captain Kori',
+            desc: 'A rigged, low-poly pirate character made for the 2024 Climate Change Game Jam.',
+            image_url: '/captain-kori.png',
+            vertices: 1321,
+        },
     ];
     return (
         <FlexContainer>
