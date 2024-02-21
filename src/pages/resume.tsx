@@ -4,7 +4,7 @@ import NestedList from '../components/NestedList/NestedList';
 import Subheader from '../components/Subheader/Subheader';
 
 export default function Resume() {
-    const gpa = 3.97;
+    const gpa = 3.98;
 
     const education: NestedListItem[] = [
         {
