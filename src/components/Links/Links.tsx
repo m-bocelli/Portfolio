@@ -1,5 +1,6 @@
 import { Link } from '@/constants/types';
 import styles from './Links.module.css';
+import FlexContainer from '../FlexContainer/FlexContainer';
 
 interface LinksProps {
     links: Link[];
@@ -7,24 +8,27 @@ interface LinksProps {
 
 export default function Links(props: LinksProps) {
     return (
-        <div>
+        <FlexContainer>
             {props.links.map(
                 (link: Link, i: number): JSX.Element => (
-                    <div
+                    <a
                         key={link.url}
                         className={styles.link_container}
-                        style={{ textAlign: i % 2 == 0 ? 'left' : 'right' }}
+                        href={link.url}
+                        target='_blank'
                     >
-                        <a
-                            className={styles.link}
-                            href={link.url}
-                            target='_blank'
+                        <div
+                            key={link.url}
+                            className={styles.link_text}
+                            style={{
+                                textAlign: i % 2 == 0 ? 'left' : 'right',
+                            }}
                         >
                             {link.title}
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 )
             )}
-        </div>
+        </FlexContainer>
     );
 }

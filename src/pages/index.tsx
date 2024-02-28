@@ -26,8 +26,8 @@ export default function Home() {
             <FlexContainer>
                 <Subheader>Bio</Subheader>
                 <Paragraph>
-                    Fourth year computer science student residing in
-                    Pennsylvania, US. Functionally fluent in English and German.
+                    Fourth year computer science student residing in the US.
+                    Fluent in English, B2 upper-intermediate in German.
                 </Paragraph>
                 <Subheader>Interests</Subheader>
                 <InterestList>
