@@ -21,17 +21,18 @@ export default function Home() {
             <Header
                 hero='michael bocelli'
                 image='bust_transparent.png'
-                bio='undergraduate software engineer'
+                bio='full-stack software engineer'
             />
             <FlexContainer>
                 <Subheader>Bio</Subheader>
                 <Paragraph>
-                    Fourth year computer science student residing in the US.
-                    Fluent in English, B2 upper-intermediate in German.
+                    University of Delaware graduate with a degree in computer
+                    science, May 2024. Fluent in English, B2 upper-intermediate
+                    in German.
                 </Paragraph>
                 <Subheader>Interests</Subheader>
                 <InterestList>
-                    <li scroll-anim='true'>FullStack development</li>
+                    <li scroll-anim='true'>Full-stack development</li>
                     <li scroll-anim='true'>Game dev.</li>
                     <li scroll-anim='true'>3D modeling</li>
                     <li scroll-anim='true'>Weightlifting</li>

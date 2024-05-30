@@ -13,7 +13,7 @@ export default function Navbar({ path }: { path: string }) {
                     <NavButton page='projects' path={path}></NavButton>
                     <NavButton page='models' path={path}></NavButton>
                     <NavButton page='resume' path={path}></NavButton>
-                    <NavButton page='blog' path={path}></NavButton>
+                    {/* <NavButton page='blog' path={path}></NavButton> */}
                 </ul>
             </div>
         </nav>
